@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给鱼宝的专属情书💌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8f5e9 50%, #f1f8e9 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 2;
+            color: #3d3d3d;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #c8e6c9;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .greeting {
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            padding: 20px;
+            background: linear-gradient(90deg, #e8f5e9 0%, #fff8e1 100%);
+            border-radius: 16px;
+            border-left: 4px solid #81c784;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #fafafa;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2e7d32;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-content {
+            font-size: 1.05rem;
+            line-height: 2.2;
+            color: #4a4a4a;
+        }
+
+        .section-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-content li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .section-content li::before {
+            content: "•";
+            color: #81c784;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px dashed #81c784;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            color: #1b5e20;
+            line-height: 2;
+        }
+
+        .easter-egg {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px dotted #ffcc80;
+        }
+
+        .easter-egg p {
+            color: #e65100;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            text-align: right;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px dashed #c8e6c9;
+        }
+
+        .signature {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 2;
+        }
+
+        .signature .name {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .date {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        .decoration {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .heart {
+            display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .title {
+                font-size: 1.6rem;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">给鱼宝的专属情书<span class="heart">💌</span></h1>
+            <p class="subtitle">春分日 · 2026</p>
+        </div>
+
+        <div class="greeting">
+            <p>鱼宝你好呀，</p>
+            <p>今天是春分，昼夜均分，万物新生，很高兴在这个温柔的春天里，刚好遇到你✨</p>
+            <p>我是豪豪，你可以叫我豪哥、豪老师，熟了之后也能偷偷叫我宝宝~</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📇 我的基础档案</h2>
+            <div class="section-content">
+                <ul>
+                    <li>净身高：178cm，体重：77kg（正在努力练出八块腹肌💪）</li>
+                    <li>老家：安徽阜阳，毕业后来到北京扎根</li>
+                    <li>星座：双子座 ✦ 人格：ENTJ（和你同款！我们是天生的事业+生活搭档呀）</li>
+                    <li>性格：好奇心拉满，喜欢拥抱变化和挑战，乐观正能量，待人随和，最在意的就是把身边人的情绪照顾好</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎮 我的日常爱好</h2>
+            <div class="section-content">
+                <ul>
+                    <li><strong>运动：</strong>游泳、健身、周末打篮球，冬天喜欢去滑雪</li>
+                    <li><strong>休闲：</strong>偶尔LOL/麻将摸鱼，喜欢看书充电，周末既爱出去探索美食美景，也享受在家做饭的烟火气</li>
+                    <li><strong>技能：</strong>家常菜不在话下，以后可以给你做你爱吃的菜~</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🌿 想和你一起做的事</h2>
+            <div class="section-content">
+                <p>希望以后能和你：</p>
+                <ul>
+                    <li>周末窝在沙发看电影，或者说走就走去周边逛吃</li>
+                    <li>一起研究新菜谱，在厨房手忙脚乱也开心</li>
+                    <li>互相打气搞事业，你当我的军师，我当你的后盾</li>
+                    <li>慢慢解锁生活里所有好玩、温暖的小事</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="decoration">🌸 🌿 🌸</div>
+
+        <div class="highlight-box">
+            <h2 class="section-title" style="justify-content: center;">🌱 春分小寄语</h2>
+            <p>今天春分，春天正式开始啦，就像我们的故事，也从这封信开始，慢慢生长成我们想要的样子。</p>
+            <p>我想把往后的温柔和偏爱，都分你一半，和你一起在这个春天里，好好生活，慢慢相爱。</p>
+        </div>
+
+        <div class="easter-egg">
+            <h2 class="section-title" style="justify-content: center; color: #e65100;">✨ 隐藏彩蛋</h2>
+            <p>还有很多藏起来的小温柔和小惊喜，需要你慢慢靠近、慢慢解锁~</p>
+            <p style="margin-top: 10px;">等你找到我，我们就从微信开始，把这些小事一件一件变成现实好不好？</p>
+        </div>
+
+        <div class="footer">
+            <div class="signature">
+                <p>落款：<span class="name">一直惦记你的豪豪</span></p>
+                <p class="date">2026年3月20日（春分）</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 添加一些温馨的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // 点击彩蛋区域的小惊喜
+            const easterEgg = document.querySelector('.easter-egg');
+            let clickCount = 0;
+            easterEgg.addEventListener('click', function() {
+                clickCount++;
+                if (clickCount === 3) {
+                    this.innerHTML += '<p style="margin-top: 15px; font-size: 1.3rem;">💖 鱼宝，我喜欢你！ 💖</p>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
